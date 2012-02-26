@@ -248,15 +248,15 @@ Fully implemented by: `Vector` (aka 1-d `Array`).
 
 `open(file_name[, read, write, create, truncate, append])` — Open a file in a mode specified by five boolean arguments. The default is to open files for reading only. Returns a stream for reading or writing from the file.
 
-`open(file_name[, "r"|"r+"|"w"|"w+"|"a"|"a+")` - Alternate syntax for open, where...
+`open(file_name[, mode])` - Alternate syntax for open, where a string-based mode specifier is used instead of the five booleans. The values of `mode` correspond to those from `fopen(3)` or Perl `open`, and are equivalent to setting the following boolean groups:
 
 <table>
-<tr><td>"r"</td><td>Read-only</td></tr>
-<tr><td>"r+"</td><td>Read and write</td></tr>
-<tr><td>"w"</td><td>Write, create, and truncate</td></tr>
-<tr><td>"w+"</td><td>Read, write, create, and truncate</td></tr>
-<tr><td>"a"</td><td>Write, create, and append</td></tr>
-<tr><td>"a+"</td><td>Read, write, create, and append</td></tr>
+<tr><td>"r"</td><td>read</td></tr>
+<tr><td>"r+"</td><td>read, write</td></tr>
+<tr><td>"w"</td><td>write, create, truncate</td></tr>
+<tr><td>"w+"</td><td>read, write, create, truncate</td></tr>
+<tr><td>"a"</td><td>write, create, append</td></tr>
+<tr><td>"a+"</td><td>read, write, create, append</td></tr>
 </table>
 
 `memio([size])` — Create an in-memory I/O stream, optionally specifying how much initial space is needed.
