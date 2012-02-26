@@ -246,7 +246,7 @@ Fully implemented by: `Vector` (aka 1-d `Array`).
 
 `stdin_stream` — Global variable referring to the standard input stream.
 
-`open(file_name[, read, write, create, truncate, append])` — Open a file in a mode specified by five boolean arguments. The default is to open files for reading only. Returns a stream for reading or writing from the file.
+`open(file_name[, read, write, create, truncate, append])` — Open a file in a mode specified by five boolean arguments. The default is to open files for reading only. Returns a stream for accessing the file.
 
 `open(file_name[, mode])` - Alternate syntax for open, where a string-based mode specifier is used instead of the five booleans. The values of `mode` correspond to those from `fopen(3)` or Perl `open`, and are equivalent to setting the following boolean groups:
 
