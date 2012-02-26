@@ -246,7 +246,18 @@ Fully implemented by: `Vector` (aka 1-d `Array`).
 
 `stdin_stream` — Global variable referring to the standard input stream.
 
-`open(file_name[, read, write, create, truncate, append])` — Open a file in a mode specified by four boolean arguments. The default is to open files for reading only.
+`open(file_name[, read, write, create, truncate, append])` — Open a file in a mode specified by five boolean arguments. The default is to open files for reading only. Returns a stream for reading or writing from the file.
+
+`open(file_name[, "r"|"r+"|"w"|"w+"|"a"|"a+")` - Alternate syntax for open, where...
+
+<table>
+<tr><td>"r"</td><td>Read-only</td></tr>
+<tr><td>"r+"</td><td>Read and write</td></tr>
+<tr><td>"w"</td><td>Write, create, and truncate</td></tr>
+<tr><td>"w+"</td><td>Read, write, create, and truncate</td></tr>
+<tr><td>"a"</td><td>Write, create, and append</td></tr>
+<tr><td>"a+"</td><td>Read, write, create, and append</td></tr>
+</table>
 
 `memio([size])` — Create an in-memory I/O stream, optionally specifying how much initial space is needed.
 
